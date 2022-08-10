@@ -1,0 +1,35 @@
+<header class="rounded pe-5px border-dark"style="display:flex; border: 1px solid black;background-color:pink">
+
+    <img src="https://us.123rf.com/450wm/simplyamazing/simplyamazing2101/simplyamazing210100032/162976251-red-double-decker-bus-city-transportation-concept-in-cartoon-illustration-vector.jpg?ver=6" alt="" style="width:130px;height:100px">
+    <h1 style="flex:1"class=" mt-3 text-center">{{title}}</h1>
+
+   
+
+    <button *ngIf="!loginService.isUserLoggedIn() && !loginService.isAdminLoggedIn()" class="btn btn-success mx-2 h-50 align-self-center" routerLink="adminlogin" >Admin Login</button>
+
+    <button *ngIf="!loginService.isUserLoggedIn() && !loginService.isAdminLoggedIn()" class="btn btn-success mx-2 h-50 align-self-center" routerLink="login">LogIn</button>
+
+    <button *ngIf="!loginService.isUserLoggedIn() && !loginService.isAdminLoggedIn()" class="btn btn-success h-50 align-self-center" routerLink="signup">SignUp</button>
+
+    <button  class="btn btn-success mx-2 h-50 align-self-center"  routerLink="logout">LogOut</button>
+
+    <button *ngIf="!loginService.isAdminLoggedIn()" routerLink="contact" class="btn btn-success mx-2 h-50 align-self-center">Contact Us</button>
+
+</header>
+<hr>
+<div id="main" class="d-flex" style="background-image: url(https://kalamtimes.com/uploads/images/news/20220505/1651758181_1aa.jpg); background-size: 100% 100% ; background-repeat: no-repeat;">
+
+
+<router-outlet></router-outlet>
+
+<!-- 
+<footer class="rounded rounded-5 bg-dark" style="background-color:rgb(110, 9, 63)">
+    <p class="text-center text-primary">&#169; EASYBUS</p>
+    <p class="text-center">
+        <a href="">T&C</a>
+        &nbsp;&nbsp;
+        <a href="">Privacy Policy</a>
+        &nbsp;&nbsp;
+        <a href="">FAQ</a>
+    </p>
+</footer> -->
