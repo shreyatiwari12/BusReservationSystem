@@ -1,0 +1,53 @@
+html {
+  font-size: 16px;
+}
+
+.plane {
+  margin-left: 20vw;
+  max-width: 400px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  background-color:rgb(182, 251, 218)
+}
+
+
+
+ol {
+  list-style :none;
+  padding: 0;
+  margin: 0;
+}
+
+.seats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;  
+}
+
+.seat {
+  display: flex;
+  flex: 0 0 14.28571428571429%;
+  padding: 5px;
+  position: relative;  
+    
+  }
+  
+     
+  
+  label {    
+    display: block;
+    position: relative;    
+    width: 100%;    
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5rem;
+   
+    /* background: lightpink ; */
+    border-radius: 5px;
+    animation-duration: 300ms;
+    animation-fill-mode: both; 
+  }

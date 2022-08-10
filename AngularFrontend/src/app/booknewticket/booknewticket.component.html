@@ -1,0 +1,21 @@
+<div class="plane w-400px rounded rounded-20">
+    <div class="cockpit">
+      <h1>Please select a seat</h1>
+    </div>
+    <ol  class="cabin d-flex flex-wrap">
+          <li class="seat"  style="min-width: 80px;" *ngFor="let st of seats" >
+           <label [ngStyle]="{'background-color': color(st) }">
+              <input type="radio" name="seat" [disabled]="check(st)"  (click)="onSelect(st)" />
+            {{st}}
+          </label>
+            <p *ngIf="st%2==0 && st%4!=0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          </li>
+        </ol>
+        <a>
+          *green seats are already booked!
+        </a>
+        <li class="list list-unstyled">
+            <input type="submit" (click)="onSubmit()" class="btn btn-sm btn-success" value="Book-Ticket"/>
+      </li>
+      
+    </div>
