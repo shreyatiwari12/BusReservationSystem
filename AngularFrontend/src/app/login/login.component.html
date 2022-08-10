@@ -1,0 +1,21 @@
+
+<form style="margin:10vh 0vh 5vh 20vw;background-color: rgb(155, 198, 227)" class="d-flex flex-column rounded rounded-5">
+<h1 class="text-center"> Login </h1>
+<h5 class="text-center"> Please enter email & password </h5>
+<form class="form-group" style="margin:10px 100px"ngNativeValidate>
+  <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+  <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+  <div class="form-group">
+    <label for="email">email :</label>
+    <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter Your email"
+      name="username" required>
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
+      name="password" required>
+  </div>
+  <button (click)=checkLogin() class="btn btn-success">Login</button>
+</form>
+  <a class="text-center text-dark" [routerLink]="['..','signup']"> New user? Click to signup!! </a>
+</form>

@@ -1,0 +1,11 @@
+.card{
+   
+    border:none;
+    width: 500px;
+    padding: 40px;
+    top: 200px;
+    left: 300px;
+    transform: translate(-50%, -50%);
+    background: rgb(98, 180, 238);
+    background-color: lavenderblush;
+}
