@@ -32,11 +32,6 @@ public class CustomerRestController {
 	@Autowired
 	private UserRepository urepo;
 	
-	/*@Autowired
-	private CustomerRepository crepo;*/
-	
-	/*@Autowired
-	private BookingRepository brepo;*/
 	
 	@PostMapping("/customer")
     public boolean loginCustomer(@Validated @RequestBody Customer customer) 
@@ -46,13 +41,10 @@ public class CustomerRestController {
         String password=customer.getPassword();
         System.out.println(email+" "+password);
         Customer c = urepo.findByEmail(email);//.orElseThrow(() -> new ResourceNotFoundException("Product not found for this id :: "));
-    //    System.out.println(d.getEmail() +d.getPassword() );
-       if(c!=null)
+       	if(c!=null)
         if(email.equals(c.getEmail()) && password.equals(c.getPassword()))
                 {
-        //    System.out.println(d.getEmail() +d.getPassword() );
-            a=true;
-           
+            		a=true;
                 }
         return a;
     }
@@ -67,24 +59,6 @@ public class CustomerRestController {
 	
 	@PostMapping("/customers")
     public Customer createCustomer(@Validated @RequestBody Customer customer) {
-		
-        /*Customer c=new Customer();
-        c.setEmail(customer.getEmail());
-        c.setFname(customer.getFname());
-        c.setLname(customer.getLname());
-        c.setPassword(customer.getPassword());
-        c.setMobile(customer.getMobile());
-        
-        Address a=new Address();
-        a.setStreet(customer.getStreet());
-        a.setCity(customer.getCity());
-        a.setPincode(customer.getPincode());
-        a.setState(customer.getState());
-        	
-        c.setAddress(a);
-        a.setCustomer(c);
-        urepo.save(c);
-        return customer;*/
 		return urepo.save(customer);
     }
 	
