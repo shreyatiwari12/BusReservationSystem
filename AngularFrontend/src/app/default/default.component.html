@@ -1,0 +1,24 @@
+<form (ngSubmit)="onSubmit()" style="margin: 50px 25vw; padding:30px 100px;background-color: rgb(129, 184, 220)"class=" rounded rounded-5 border-dark d-flex flex-column">
+    <h3>Book Tickets</h3>
+    <p>Select the Source</p>
+    <select [(ngModel)]="start" class="rounded rounded-3" name="start" >
+        
+        <option *ngFor="let source of sources" [ngValue]="source">
+            {{source}}
+        </option>
+    </select>
+    
+
+    <p>Select Your Destination</p>
+    <select [(ngModel)]="end" class="rounded rounded-3"name="destination" id="">
+        <ng-container *ngFor="let dest of destinations">
+        <option  [ngValue]="dest" *ngIf="dest!=start">{{dest}}</option></ng-container>
+    </select>
+   
+    
+    <p>Select JourneyDate</p>
+    <input [(ngModel)]="journeyDate" class="rounded rounded-2" type="date" name="fdate" id="">
+
+    
+    <button  style="margin-top: 10px;" class="btn btn-sm btn-success" name="search" value="Search For Buses">search for buses</button>    
+</form>
