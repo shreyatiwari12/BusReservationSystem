@@ -1,0 +1,73 @@
+body{
+	background: #9c0526;
+	font-family: 'Hind Siliguri', sans-serif;
+}
+.card{
+	width: 500px;
+	border:#eb457c;
+	border-radius: 45px;
+    background-color: blanchedalmond;
+	margin-left: 20px;
+}
+.adiv{
+	background: #0063FF;
+	border-radius: 15px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	font-size: 12px;
+	height: 46px;
+}
+img{
+	margin-right: 10px;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+}
+.fas{
+	cursor: pointer;
+}
+.fa-chevron-left{
+	color: #fff;
+}
+h6{
+	font-size: 12px;
+	font-weight: bold;
+}
+small{
+	font-size: 10px;
+	color: #f729a1;
+}
+.form-control{
+	border: none;
+	background: #d0e8eb;
+	font-size: 12px;
+}
+.form-control:focus{
+	box-shadow: none;
+	background: #eeadd3;
+}
+.form-control::placeholder{
+	font-size: 12px;
+	color: #9c0505;
+}
+.btn-primary{
+	background: #a5c0eb;
+	padding: 4px 0 7px;
+	border: none;
+}
+.btn-primary:focus{
+	box-shadow: none;
+}
+.btn-primary span{
+	font-size: 12px;
+	color: #0a78c2;
+}
+p.mt-3{
+	font-size: 11px;
+ 	color: #eb457c; 
+ 	cursor: pointer;
+}
+.container {
+    width:2000px;
+   
+}
