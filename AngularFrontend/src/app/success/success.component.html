@@ -1,0 +1,51 @@
+<div style="display: flex" class="h-500px">
+    <nav style="height:100;width:250px"class="border border-2 bg-light  display-inline-block" >
+        <ul class="list-unstyled components">
+            <li>
+                <button  class="btn w-100  btn-primary" [routerLink]="['..','bookings']">Bookings</button>
+            </li>
+            <li>
+                <button class="btn w-100 mt-1 btn-primary" [routerLink]="['..','profile']">Profile</button>
+            </li>
+            <li>
+                <button routerLink="changepassword" class="btn mt-1 w-100 btn-primary" [routerLink]="['..','changepassword']">Change Password</button>
+            </li>
+            <li>
+                <button class="btn mt-1 w-100 btn-primary" [routerLink]="['..','newticket']">Wallet</button>
+            </li>
+            
+        </ul>
+    </nav>
+    
+<div class="d-flex flex-column">
+<h2 class="text-center text-success">Thank You, Your ticket has been booked</h2>
+<hr>
+<div class="invoice bg-light p-5" style="margin-left: 100px;">
+    <h1 class="text-center">Ticket Receipt</h1>
+<h1 class="text-center">EASYBUS Pvt. ltd</h1>
+<hr>
+<div class="details">
+
+    <p>Name:{{user.fname+" "+user.lname}}</p>
+    <p>Email:{{user.email}}</p>
+    <p>Mobile No: {{user.mobile}}</p>
+    <p>Address: {{user.street}},{{user.city}},{{user.state}}</p>
+
+</div>
+<hr>
+<div class="booking">
+
+    <p><b>Booking Id</b>: {{booking.bookId}}</p>
+    <p><b>Bus No</b>: {{booking.busNo}}</p>
+    <p><b>Booking Date</b> : {{booking.bookedDate|slice:0:10}}</p>
+    <p><b>Journey Date</b>: {{booking.journeyDate|slice:0:10}}</p>
+    <p><b>Journey Route</b>: {{booking.source+" - "+booking.destination}}</p>
+    <p><b>Fare</b>: RS. {{booking.price}}</p>
+    <p><b>Status</b>: {{booking.status}}</p>
+</div>
+<hr>
+<i>* Tickets once booked, can be cancelled at before the journey day only!</i>
+<i>Thank you and we wish you a happy journey</i>
+</div>
+
+<a href="feedback" style="text-decoration:none">Please Share Your Experience By Giving feedback</a></div></div>
