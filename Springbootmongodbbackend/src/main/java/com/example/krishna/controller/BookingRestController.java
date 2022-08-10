@@ -80,7 +80,7 @@ public class BookingRestController {
 	}
 	
 	
-	/*@GetMapping("/getUpcoming/{email}")
+	@GetMapping("/getUpcoming/{email}")
 	public List<Bookings> getUBookings(@PathVariable String email){
 		
 		Customer cust = urepo.findByEmail(email);
@@ -107,7 +107,7 @@ public class BookingRestController {
 		Date date=new Date();
 		return brepo.getBookings(cust,date);
 		
-	}*/
+	}
 	
 	
 	@GetMapping("/getbooked/{busId}/{jdate}")
@@ -136,7 +136,7 @@ public class BookingRestController {
 		
 		
 		
-	/*@DeleteMapping("/cancel/{id}")
+	@DeleteMapping("/cancel/{id}")
 	public void cancelBooking(@PathVariable Long id) {
 		
 		String source=brepo.getSource(id);
@@ -151,7 +151,7 @@ public class BookingRestController {
 		brepo.save(book);
 		
 	}
-	*/
+	
 	@GetMapping("/latest")
 	public Booking getLatest() {
 		List<Booking> bookings = brepo.getLatest();
