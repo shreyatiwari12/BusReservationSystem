@@ -18,8 +18,7 @@ public interface BusRepository extends MongoRepository<Bus , Long> {
 	@Query("{'busNo' : ?0}")
 	Bus findByBusNo(long busno);
 	
-	/*@Query(value="Select * From routes WHERE source=?1 AND destination=?2",
-			nativeQuery=true)*/
+	
 	@Query(value = "{source : ?0, destination : ?1}")
 	Bus findRoute(String source, String destination);
 	
